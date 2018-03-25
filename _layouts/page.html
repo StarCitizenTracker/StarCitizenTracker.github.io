@@ -18,7 +18,7 @@ layout: compress
         <meta itemprop="datePublished" content="2016-11-10T00:51:00-05:00">
         <meta itemprop="publisher" content="SOMETHINGAWFULDOTCOM">
         <meta itemprop="description" content="StarCitizen Tracker offers a frank rundown of all the expectations and features for the largest crowdfunding project in history, Star Citizen">
-        <meta itemprop="headline" content="StarCitizen Tracker - The Best Way to track the lofty expectations of Star Citizen." />
+        <meta itemprop="headline" content="StarCitizen Tracker - The Best Way to track development of Star Citizen." />
         <meta itemprop="image" content="assets/social-share.png">
         <!-- Twitter Card data -->
         <meta name="twitter:card" content="summary_large_image"/>
@@ -27,13 +27,13 @@ layout: compress
         <meta name="twitter:description" content="StarCitizen Tracker offers a frank rundown of all the expectations and features for the largest crowdfunding project in history, Star Citizen">
         <meta name="twitter:creator" content="@StarCitizenTracker">
         <!-- Twitter summary card with large image must be at least 280x150px -->
-        <meta name="twitter:image" content="https://starcitizentracker.github.io/assets/social-share.png">
+        <meta name="twitter:image" content="{{ site.url }}/assets/social-share.png">
 
         <!-- Open Graph data -->
         <meta property="og:title" content="StarCitizen Tracker" />
         <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://starcitizentracker.github.io/" />
-        <meta property="og:image" content="https://starcitizentracker.github.io/assets/trump-main.jpg" />
+        <meta property="og:url" content="{{ site.url }}" />
+        <meta property="og:image" content="{{ site.url }}/assets/trump-main.jpg" />
         <meta property="og:description" content="StarCitizen Tracker offers a frank rundown of all the expectations and features for the largest crowdfunding project in history, Star Citizen" />
         <meta property="og:site_name" content="StarCitizen Tracker" />
         <meta property="article:published_time" content="2017-04-17T00:51:00-05:00" />
@@ -61,14 +61,6 @@ layout: compress
         <!-- CSS custom -->
         <link rel="stylesheet" href={{ "/css/styles.css" | relative_url }}>
         <!-- Analytics JS -->
-	<script>
-		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-		ga('create', 'UA-114799564-1', 'auto');
-		ga('send', 'pageview');
-	</script>
     </head>
     <body>
         <nav class="navbar navbar-default navbar-fixed-top">
@@ -85,7 +77,7 @@ layout: compress
                         <span class="icon-bar"></span>
                     </button>
 
-                    <a class="navbar-brand" href="https://starcitizentracker.github.io/">
+                    <a class="navbar-brand" href="{{ site.url }}">
                         <b>StarCitizen Tracker</b>
                     </a>
 
@@ -93,10 +85,10 @@ layout: compress
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <form class="navbar-form navbar-right" action="https://goo.gl/forms/kBqRMa2nVfzdTfSk1" method="get" target="_blank">
+                    <form class="navbar-form navbar-right" action="{{ site.gh_url }}/issues" method="get" target="_blank">
                         <button type="submit" class="btn btn-default" data-toggle="tooltip" data-placement="bottom" title="Will need sources!">Submit new</button>
                     </form>
-			<form class="navbar-form navbar-right" action="https://goo.gl/forms/xMK6E5f5errVwriA3" method="get" target="_blank">
+			              <form class="navbar-form navbar-right" action="{{ site.gh_url }}/issues" method="get" target="_blank">
 				<button type="submit" class="btn btn-default" data-toggle="tooltip" data-placement="bottom" title="Please review the FAQ before submitting">Update an expectations status</button>
 			</form>
                     <ul class="nav navbar-nav navbar-right">
@@ -117,7 +109,7 @@ layout: compress
             <div class="container">
                 <div class="row">
                     <div class="col-md-3">
-                        <p class="text-muted">By <a href="https://forums.somethingawful.com/forumdisplay.php?forumid=212" target="_blank" class="maintainer-name">Bitter EvE Goons</a></p>
+                        <p class="text-muted">By <a href="https://github.com/sqrw/sqrw.github.io/graphs/contributors" target="_blank" class="maintainer-name">All the contributors</a></p>
                     </div>
                     <div class="col-md-3">
                         <p class="text-muted">Forked from <a href="https://trumptracker.github.io/" target="_blank" rel="nofollow">Trump Tracker</a></p>
@@ -126,15 +118,11 @@ layout: compress
                     <div class="col-md-3">
                         <p class="text-muted"><a href="https://raw.githubusercontent.com/StarCitizenTracker/StarCitizenTracker.github.io/master/_data/data.json" target="_blank" rel="nofollow">Open Data</a></p>
                     </div>			
-                    <div class="col-md-3">
-			<p class="text-muted"><a href="/presskit/">Press Kit</a></p>
-                        <p class="text-muted"><a href="https://youtu.be/cRQppqV2LwQ?t=74" target="_blank">Terms &amp; Conditions</a></p>
-                    </div>
                 </div>
             </div>
 		<div class="row">
 			<div class="col-md-12 text-center">
-			<h4 class="text-muted">Open Source on Github <a href="https://github.com/StarCitizenTracker/StarCitizenTracker.github.io"><i class="fa fa-github fa-fw"></i></a></h4>
+			<h4 class="text-muted">Open Source on Github <a href="{{ site.gh_url }}"><i class="fa fa-github fa-fw"></i></a></h4>
 			</div>
 		</div>
         </footer>

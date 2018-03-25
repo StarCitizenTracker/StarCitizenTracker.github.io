@@ -17,10 +17,6 @@ layout: page
 
         <div class="col-md-6">
             <ul class="list-group">
-                <!-- <li class="list-group-item list-group-item inauguration-time-container">
-                    <i class="fa fa-home fa-fw"></i>
-                    <b id="inauguration-time">Days Till Inauguration: <span id="inauguration-days"><i class='loading'>Loading...</i></span></b>
-                </li> -->
                 <li class="list-group-item list-group-item">
                     <i class="fa fa-calendar fa-fw"></i>
                     <b>Days since Kickstarter ended: <span id="days-in-office"><i class='loading'>Loading...</i></span></b>
@@ -45,56 +41,26 @@ layout: page
         </div>
 
         <div class="container-fluid">
-            <p>In 2012, Chris Roberts convinced 34,397 backers on Kickstarter to give his company $2,134,374 for a space simulation game "Star Citizen" with a Wing Commander style single player mode entitled "Squadron 42"</p>
-            <p>Much has been promised to backers over the course of the last 6 years. Expectations for the titles are stratospheric, bordering on outlandish; with Chris himself setting the tone.</p>
-            <p><b>StarCitizen Tracker is a good faith attempt to catalog public claims and commitments made by Cloud Imperium Games Corporation. It is intended to be useful and constructive for both fans and developers. In the absence of similar resources it exists because the need is great.</b></p>
-            <p>This is a crowdsourced endeavor. If you spot an inaccuracy, please <a href="https://goo.gl/forms/xMK6E5f5errVwriA3">submit it.</a></p>
+            <p>This is a fork of <a href="https://starcitizentracker.github.io/">Starcitizentracker</a> which while being a good idea it sadly lacks any kind of transparency which hinders it's claim to be a good faith attempt to track development.</p>
+            <p>This fork aims at fixing this, to this end all discussion, changes and decisions will be <a href="{{ site.gh_url }}/issues">completely in the open</a> and transparrent.</p>
             <br>
                 <span><b>Accuracy Confidence:</b></span>
                 <button type="submit" class="btn btn-default" id="confidence-btn" data-toggle="tooltip" data-placement="right" title="" data-original-title="submit sources to improve this number">{{ confidence }}%</button>
             </p>
-            
             <div id="share-buttons" class="text-center">
                 <ul class="list-inline">
                     <li>
-                        <!-- <a href="" target="_blank"
-                           style="color:#3b5998;">
-                            <i class="fa fa-2x fa-facebook-square"></i>
-                        </a> -->
-                    </li>
-                    <li>
-                        <a href="https://starcitizentracker.tumblr.com/" target="_blank"
-                           style="color:#36465d;">
-                            <i class="fa fa-2x fa-tumblr"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://twitter.com/home?status=Track%C2%A0%40RobertsSpaceInd's%C2%A0commitments%C2%A0with%C2%A0%23StarCitizenTracker%20https%3A//starcitizentracker.github.io/"
+                        <a href="https://twitter.com/home?status=Track%C2%A0%40RobertsSpaceInd's%C2%A0commitments%C2%A0with%C2%A0%23StarCitizenTracker%20https%3A//sqrw.github.io/"
                            target="_blank" style="color:#1da1f2;">
                             <i class="fa fa-2x fa-twitter"></i>
                         </a>
-                    </li>
-                    <!-- <li>
-                        <-- <a href="https://reddit.com/r/starcitizen" target="_blank" style="color:#ff5700;">
-                            <i class="fa fa-2x fa-reddit"></i>
-                        </a>
-                    </li> -->
-                    <!-- <li>
-                        <a href="https://discord.gg/vsPHsKn" target="_blank" style="color:#7289da;">
-                            <i class="fa fa-2x fa-comments"></i>
-                        </a>
-                    </li> -->
-                    <!-- <li>
-                        <a href="https://luithollander.nl/trumptracker/rss.php" target="_blank" style="color:#ffa500;">
-                            <i class="fa fa-2x fa-rss"></i>
-                        </a>
-                    </li> -->
+                    </li-->
                 </ul>
             </div>
             <p><b>Estimated Completion on <u>Major Systems</u> Only:</b></p>
-            <a href="https://starcitizentracker.github.io/majorsystems/" style="color:white">
+            <a href="https://sqrw.github.io/majorsystems/" style="color:white">
             <div class="progress">
-                <div class="progress-bar progress-bar-default progress-bar-striped" role="progressbar" style="width:{{ estimatedprogress }}%; cursor: pointer;" onclick="window.location='https://starcitizentracker.github.io/majorsystems/';">{{ estimatedprogress }}%</div>
+                <div class="progress-bar progress-bar-default progress-bar-striped" role="progressbar" style="width:{{ estimatedprogress }}%; cursor: pointer;" onclick="window.location='https://sqrw.github.io/majorsystems/';">{{ estimatedprogress }}%</div>
             </div>
             </a>
          </div>
@@ -215,7 +181,7 @@ layout: page
                                     <span class="badge badge-inverse">{{ tag }}</span>
                                 {% endif %}
                             {% endfor %}
-                            
+
                         <!-- add superscript citations and sources -->
                         {% for source in promise.sources %}
                             <sup><a href="{{ source }}">{{ forloop.index }}</a></sup>
